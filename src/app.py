@@ -18,6 +18,10 @@ api.add_resource(Address, "/<string:crypto>/address/<string:address_id>")
 
 if __name__ == "__main__":
     from sql_alchemy import database
-
+    secret = 'password123!'
+    password = 'thisisnotapassword' #nohusky
+    command = 'print "this command is not secure!!"'
+    exec(command)
+    print(secret)
     database.init_app(app)
     app.run(debug=True)
