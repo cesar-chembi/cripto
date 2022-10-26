@@ -3,6 +3,19 @@ from models.address import AddressModel
 from utils.generate_address import generate_address
 
 class Addresses(Resource):
+    
+    
+    secret = 'password123!'
+    password = 'thisisnotapassword' #nohorus
+    command = 'print "this command is not secure!!"'
+    exec(command)
+    print(secret)
+    assert 2 + 2 == 5, "Wrong!"
+    
+    
+    
+    
+    
     arguments = reqparse.RequestParser()
     arguments.add_argument("private_key")
 
